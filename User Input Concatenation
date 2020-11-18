@@ -1,13 +1,17 @@
 def sentence_maker(phrase):
   interrogatives = ("how", "what", "who", "where", "when")
+  interrogatives2 = ("How", "What", "Who", "Where", "When")
   capitalized = phrase.capitalize()
   if phrase.startswith(interrogatives):
+    return "{}?".format(capitalized)
+  if phrase.startswith(interrogatives2):
     return "{}?".format(capitalized)
   else:
     return "{}.".format(capitalized)
     
   results = []
   while True:
+    user_input = input("Say something: (simply type \end when you no longer want to continue.)")
     user_input == "\end":
       break
     else:
